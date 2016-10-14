@@ -40,7 +40,7 @@ function onSuccess(imageURL){
 function onFail(message){
 	alert('Failed because:'+message);
 }
-
+*/
 
 function barcode(){
 	cordova.plugins.barcodeScanner.scan(
