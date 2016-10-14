@@ -14,6 +14,7 @@ function setIptions(srcType){
 
 
 function openCamera(){
+	alert("you clicked me");
 	var srcType = navigator.Camera.PictureSourceType.CAMERA;
 	var options = setOptions(srcType);
 	var func = createNewFileEntry;
