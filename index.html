@@ -10,6 +10,9 @@
 		<link rel="stylesheet" href="vendor/wow/animate.css" />
 		<link rel="stylesheet" href="css/nativedroid2.css" />
 
+		<script type="text/javascript" src="cordova.js"></script>
+		<script src="phonegap.js"></script>
+
 		<meta name="mobile-web-app-capable" content="yes">
 	 	<meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -20,7 +23,7 @@
 
 		<div data-role="page">
 
-		<div><a href="#" class="ui-btn ui-btn-raised clr-primary" onclick="navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, destinationType: navigator.camera.DestinationType.FILE_URI });">Camera</a></div>
+		<div><a href="#" class="ui-btn ui-btn-raised clr-primary" onclick="openCamera();">Camera</a></div>
 				<div id="pictureTaken" style="display: block"></div>
 
 				<div><a href="#" class="ui-btn ui-btn-raised clr-primary" onclick="barcode();">Barcode Scanner</a></div>
@@ -47,7 +50,7 @@
 		<script src="vendor/wow/wow.min.js"></script>
 		<script src="js/nativedroid2.js"></script>
 		<script src="nd2settings.js"></script>
-		<script type="text/javascript" src="cordova.js"></script>
+		
 
 	</body>
 </html>
