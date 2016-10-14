@@ -2,7 +2,7 @@
 function setIptions(srcType){
 	var options = {
 		quality:50,
-		destinationType: Camera.DestinationType.FILE_URI,
+		destinationType: navigator.Camera.DestinationType.FILE_URI,
 		sourceType:srcType,
 		encodingType:Camera.encodingType.JPEG,
 		mediaType: Camera.mediaType.PICTURE,
@@ -14,7 +14,7 @@ function setIptions(srcType){
 
 
 function openCamera(){
-	var srcType = Camera.PictureSourceType.CAMERA;
+	var srcType = navigator.Camera.PictureSourceType.CAMERA;
 	var options = setOptions(srcType);
 	var func = createNewFileEntry;
 
