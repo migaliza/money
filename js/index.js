@@ -1,19 +1,19 @@
 
-function setIptions(srcType){
-	var options = {
-		quality:50,
-		destinationType: navigator.Camera.DestinationType.FILE_URI,
-		sourceType:srcType,
-		encodingType:Camera.encodingType.JPEG,
-		mediaType: Camera.mediaType.PICTURE,
-		allowEdit:true,
-		correctOrientation:true
-	}
-	return options;
+document.addEventListener("deviceready",onDeviceReady,false);
+var pictureSource;
+var destinationType;
+function onDeviceReady(){
+	pictureSource=navigator.camera.PictureSourceType;
+	destinationType = navigator.camera.DestinationType;
+}
+function capturePhoto(){
+	navigator.camera.getPicture(onPhotoDataSuccess,onFail,{quality:50,destinationType:destinationType.DATA_URL});
+
 }
 
 
-function openCamera(){
+
+/*function openCamera(){
 	alert("you clicked me");
 	var srcType = Camera.PictureSourceType.CAMERA;
 	var options = setOptions(srcType);
